@@ -56,8 +56,8 @@ If `contact_email` is set to an empty string, the final section offers a browser
 
 1. Create a repository and copy the source files, including `.github/workflows/pages.yml`.
 2. Set your production `url` in `_config.yml`; keep `baseurl` empty for a root domain. Project-path deployments are handled by the workflow's base path.
-3. In repository Settings → Pages, choose **GitHub Actions** as the source.
-4. Push to `main`. The workflow installs Ruby dependencies, builds Jekyll and deploys `_site`.
+3. Add a repository Actions secret named `PAGES_ENABLEMENT_TOKEN` containing a token with permission to enable Pages (a fine-grained token with **Pages: write** access, or a classic token with the `repo` scope).
+4. Push to `main`. The workflow enables/configures Pages, installs Ruby dependencies, builds Jekyll and deploys `_site`.
 
 The design is technically compatible with static hosts. GitHub restricts using Pages to run an online business; confirm your intended commercial use before making that the production host. Jekyll's generated `_site` directory can also be deployed to another static host without changing the design.
 
