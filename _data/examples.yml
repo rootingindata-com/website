@@ -1,0 +1,24 @@
+- id: extraction
+  tag: DOCUMENT EXTRACTION
+  title: From PDFs to possibilities.
+  text: Turn supplier catalogues, invoices and forms into structured records, ready for your next step.
+  detail: A document workflow can extract agreed fields from PDFs, validate formats and totals, flag uncertain values for review, and export clean CSV or JSON. The scope depends on your document formats and the accuracy you need.
+  input: PDF documents
+  output: Structured records
+  icon: document
+- id: reporting
+  tag: REPORTING & ANALYSIS
+  title: A clearer picture. Automatically.
+  text: Bring weekly exports together in a repeatable report, with the numbers that matter to your business.
+  detail: A reporting workflow can combine sales and cost exports, normalise dates and categories, apply agreed KPI definitions, and produce a refreshed overview. Missing or inconsistent inputs are highlighted rather than silently ignored.
+  input: Scattered exports
+  output: One useful overview
+  icon: chart
+- id: integration
+  tag: CONNECTED SYSTEMS
+  title: Enter it once. Use it everywhere.
+  text: Connect your existing tools so orders, updates and customer information move between them.
+  detail: An integration can pass approved order details from one system to another using APIs or agreed exports. Validation, duplicate detection, retries and an error log help make the process dependable. Available APIs and permissions determine what can be connected.
+  input: Disconnected tools
+  output: A joined-up workflow
+  icon: connect

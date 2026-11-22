@@ -1,0 +1,12 @@
+- label: UNDERSTAND
+  title: Start with the problem.
+  description: We learn how things work today, identify the real bottleneck and define what a successful improvement looks like.
+- label: PLAN
+  title: Find the right first step.
+  description: Agree a focused scope, clear deliverables and a fixed first step before development begins.
+- label: BUILD
+  title: Make it work together.
+  description: See progress early, test the solution with real data and keep the build aligned through regular feedback.
+- label: HAND OVER
+  title: Keep it growing.
+  description: Receive a working solution, clear documentation and practical guidance—with support available as your needs grow.

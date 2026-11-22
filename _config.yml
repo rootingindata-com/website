@@ -1,0 +1,23 @@
+title: Rooting in Data
+description: Practical software, data and automation for growing businesses. Less repetitive work, clearer information and systems that work together.
+url: ""
+baseurl: ""
+lang: en-IE
+location: Ireland
+founder: Sylwester Stocki
+markdown: kramdown
+permalink: pretty
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - dist
+  - scripts
+  - package.json
+  - package-lock.json
+  - rooting-in-data-jekyll.zip
+  - .openai
+
+contact_email: "ryciewdanych@gmail.com"

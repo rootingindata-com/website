@@ -1,0 +1,374 @@
+---
+layout: default
+---
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span>ROOTED IN YOUR BUSINESS. BUILT FOR WHAT’S NEXT.</p>
+        <h1 id="hero-title">Better systems.<br />Deeper insights.<br /><em>Room to grow.</em></h1>
+        <p class="hero-description">
+        Turn manual work, scattered data and disconnected tools into simple systems that save time. We build practical
+        software and automation around the way your business actually works.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#contact">Let’s untangle your data</a
+          ><a class="text-link" href="#services"
+            >Explore what we do <span class="link-plus" aria-hidden="true">+</span></a
+          >
+        </div>
+        <div class="hero-footnote">
+          <span class="tiny-root" aria-hidden="true">✳</span
+          ><span>Independent expertise. Practical solutions. Based in Ireland.</span>
+        </div>
+      </div>
+      <div class="demo-wrap">
+        <div class="demo-ornament ornament-one" aria-hidden="true"></div>
+        <div class="demo-ornament ornament-two" aria-hidden="true"></div>
+        <div class="workflow-demo" aria-label="Interactive document extraction example">
+          <div class="demo-top">
+            <span class="demo-title"><span class="demo-mark" aria-hidden="true"></span>A LITTLE LESS MANUAL.</span
+            ><span class="demo-label">INTERACTIVE EXAMPLE</span>
+          </div>
+          <div class="demo-tabs" role="tablist" aria-label="Example document">
+            <button
+              type="button"
+              id="tab-invoice"
+              role="tab"
+              aria-controls="demo-panel"
+              aria-selected="true"
+              data-demo="invoice"
+            >
+              Invoice</button
+            ><button
+              type="button"
+              id="tab-catalogue"
+              role="tab"
+              aria-controls="demo-panel"
+              aria-selected="false"
+              tabindex="-1"
+              data-demo="catalogue"
+            >
+              Product catalogue
+            </button>
+          </div>
+          <div id="demo-panel" role="tabpanel" aria-labelledby="tab-invoice" tabindex="0">
+            <div class="source-document">
+              <div class="document-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  {% include icons.html name='document' %}
+                </svg>
+              </div>
+              <div>
+                <strong id="demo-file">supplier-invoice.pdf</strong
+                ><span id="demo-source">One document. A handful of useful details.</span>
+              </div>
+              <span class="file-type">PDF</span>
+            </div>
+            <div class="processing-bridge">
+              <span class="bridge-line"></span
+              ><span class="process-chip"
+                ><span class="process-symbol" aria-hidden="true">✳</span> EXTRACT · VALIDATE · STRUCTURE</span
+              ><span class="bridge-line"></span>
+            </div>
+            <div class="structured-data">
+              <div class="data-header"><span>Ready to work with</span><span class="format-label">JSON</span></div>
+              <dl id="demo-output">
+                <div>
+                  <dt>supplier</dt>
+                  <dd>Oak &amp; Co.</dd>
+                </div>
+                <div>
+                  <dt>invoice_number</dt>
+                  <dd>INV-2026-042</dd>
+                </div>
+                <div>
+                  <dt>total_eur</dt>
+                  <dd class="data-number">1,240.00</dd>
+                </div>
+                <div>
+                  <dt>review_status</dt>
+                  <dd><span class="review-badge">Ready for review</span></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="demo-bottom">
+            <span class="demo-disclaimer" id="demo-status" role="status">Sample data. Real possibilities.</span
+            ><button class="run-demo" type="button" id="run-demo">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m7 4 9 6-9 6z" /></svg>Replay
+              workflow
+            </button>
+          </div>
+        </div>
+        <div class="demo-caption">
+          <span class="caption-dash"></span>From scattered information to solid foundations.
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="principles-bar" aria-label="Our principles">
+    <div class="container principles-inner">
+      <span
+        ><svg viewBox="0 0 24 24" aria-hidden="true">{% include icons.html name='check' %}</svg>Focused on your
+        priorities</span
+      ><span
+        ><svg viewBox="0 0 24 24" aria-hidden="true">{% include icons.html name='check' %}</svg>You keep your data and
+        code</span
+      ><span
+        ><svg viewBox="0 0 24 24" aria-hidden="true">{% include icons.html name='check' %}</svg>Clear scope. One-to-one
+        support.</span
+      >
+    </div>
+  </section>
+  <section class="section services" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">WHAT WE DO</p>
+          <h2 id="services-title">Clear the busywork.<br /><em>Make space for better.</em></h2>
+        </div>
+        <p>
+          Practical help where people, processes and technology meet. Start with one bottleneck and turn it into a
+          measurable improvement.
+        </p>
+      </div>
+      <div class="services-grid">
+        {% for service in site.data.services %}
+        <article class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              {% include icons.html name=service.icon %}
+            </svg>
+          </div>
+          <p class="card-label">{{ service.label }}</p>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+          <ul>
+            {% for item in service.items %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          <a class="card-link" href="#contact">Let’s explore it <span aria-hidden="true">+</span></a>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section class="connection-section">
+    <div class="container connection-grid">
+      <div>
+        <p class="eyebrow">THE RIGHT CONNECTIONS CHANGE THINGS.</p>
+        <h2>Your tools should<br />work <em>together.</em></h2>
+        <p>
+          Your best information may be trapped in PDFs, inboxes, spreadsheets or systems that do not talk to each other.
+          We connect those pieces and turn them into reliable, useful data.
+        </p>
+        <a class="text-link" href="#examples"
+          >See what that could look like <span class="link-plus" aria-hidden="true">+</span></a
+        >
+      </div>
+      <div
+        class="connection-visual"
+        role="img"
+        aria-label="Documents, spreadsheets and applications connect through Rooting in Data to produce usable insights"
+      >
+        <div class="connection-sources">
+          <span
+            ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              {% include icons.html name='document' %}</svg
+            >Documents</span
+          ><span
+            ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              {% include icons.html name='data' %}</svg
+            >Spreadsheets</span
+          ><span
+            ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              {% include icons.html name='code' %}</svg
+            >Applications</span
+          >
+        </div>
+        <div class="connection-join" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="connection-core" aria-hidden="true">{% include brand.html %}</div>
+        <div class="connection-result">
+          <span class="result-line" aria-hidden="true"></span>
+          <div>
+            <span class="result-icon" aria-hidden="true">✳</span><strong>Something useful.</strong
+            ><span>Clean data. Clear insights. Less admin.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section approach" id="approach" aria-labelledby="approach-title">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">HOW IT WORKS</p>
+          <h2 id="approach-title">Small steps.<br /><em>Solid foundations.</em></h2>
+        </div>
+        <p>
+          No big leap required. Bring the problem and we’ll identify a sensible first step, prove the value and build
+          from there.
+        </p>
+      </div>
+      <div class="process-grid">
+        {% for step in site.data.process %}
+        <article class="process-step">
+          <div class="step-node" aria-hidden="true"></div>
+          <p class="card-label">{{ step.label }}</p>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section class="section examples" id="examples" aria-labelledby="examples-title">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">POSSIBILITIES, MADE PRACTICAL</p>
+          <h2 id="examples-title">What could work<br /><em>look like for you?</em></h2>
+        </div>
+        <p>
+          See how a practical solution can reduce admin, improve visibility or connect everyday tools. Every project
+          starts with your real workflow.
+        </p>
+      </div>
+      <div class="examples-grid">
+        {% for example in site.data.examples %}
+        <article class="example-card">
+          <div class="example-art art-{{ example.id }}" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="example-big-icon">
+              {% include icons.html name=example.icon %}</svg
+            ><span class="art-small art-small-one"></span><span class="art-small art-small-two"></span>
+            <div class="example-flow">
+              <span>{{ example.input }}</span><span class="flow-connector"></span><strong>{{ example.output }}</strong>
+            </div>
+          </div>
+          <div class="example-copy">
+            <p class="card-label">{{ example.tag }}</p>
+            <h3>{{ example.title }}</h3>
+            <p>{{ example.text }}</p>
+            <button
+              class="card-link example-open"
+              type="button"
+              data-title="{{ example.title | escape }}"
+              data-detail="{{ example.detail | escape }}"
+            >
+              Explore the example <span aria-hidden="true">+</span></button
+            ><span class="example-note">Illustrative example</span>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="container about-grid">
+      <div class="about-visual" aria-hidden="true">
+        <svg class="root-art" viewBox="0 0 400 400" fill="none">
+          <circle cx="200" cy="200" r="150" />
+          <circle cx="200" cy="200" r="110" />
+          <circle cx="200" cy="200" r="70" />
+          <path
+            class="root-main"
+            d="M200 75v150m0-80-65-40m65 85 75-48m-75 88-55 55m55-55 55 55m-55-55v90m-55-35-45 5m45-5 5 45m105-45 45 5m-45-5-5 45"
+          />
+          <circle class="root-dot" cx="200" cy="70" r="8" />
+          <circle class="root-dot" cx="130" cy="102" r="8" />
+          <circle class="root-dot" cx="280" cy="139" r="8" />
+          <circle class="root-dot" cx="200" cy="325" r="5" />
+          <circle class="root-dot" cx="100" cy="289" r="5" />
+          <circle class="root-dot" cx="300" cy="289" r="5" /></svg
+        ><span class="about-art-caption">Rooted in understanding.<br />Built to keep growing.</span>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">THE PERSON BEHIND THE WORK</p>
+        <h2 id="about-title">Good software.<br /><em>Human approach.</em></h2>
+        <p class="about-intro">
+          Hi, I’m {{ site.founder }}. I’m a senior software engineer helping Irish businesses remove friction with
+          dependable software, cleaner data and straightforward automation.
+        </p>
+        <p>
+          My background spans backend systems, APIs and data pipelines. Rooting in Data brings that experience to
+          everyday business problems, with direct collaboration from the first conversation to the handover.
+        </p>
+        <div class="about-tags">
+          <span>Software engineering</span><span>Data pipelines</span><span>Systems integration</span>
+        </div>
+        <a class="text-link" href="#contact"
+          >Tell me what you’re working on <span class="link-plus" aria-hidden="true">+</span></a
+        >
+      </div>
+    </div>
+  </section>
+  <section class="section faq-section" aria-labelledby="faq-title">
+    <div class="container faq-grid">
+      <div>
+        <p class="eyebrow">A FEW GOOD QUESTIONS</p>
+        <h2 id="faq-title">Before we<br /><em>get started.</em></h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Is my business too small for this?</summary>
+          <p>
+            Small teams often have the most to gain from removing repetitive work. We can start with one clear problem
+            and agree a focused project that fits your budget and priorities.
+          </p>
+        </details>
+        <details>
+          <summary>Do I need to know exactly what I need?</summary>
+          <p>
+            No. Explain what happens today, what is frustrating and what a better outcome looks like. We can explore the
+            options together before deciding what to build.
+          </p>
+        </details>
+        <details>
+          <summary>Does everything need AI?</summary>
+          <p>
+            No. A straightforward integration or script is often the right answer. AI is an option for tasks such as
+            document extraction or classification when it is useful and can be reviewed and tested.
+          </p>
+        </details>
+        <details>
+          <summary>Who owns the code and the data?</summary>
+          <p>
+            Code ownership, access and any third-party licences are agreed in the project scope. The aim is a documented
+            solution you can keep using, with your business retaining control of its data.
+          </p>
+        </details>
+        <details>
+          <summary>What happens after the project?</summary>
+          <p>
+            Each project includes an agreed handover. Maintenance, monitoring and further improvements can be arranged
+            separately, with the responsibilities made clear.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="contact-section" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-inner">
+      <p class="eyebrow">LET’S FIND YOUR FIRST USEFUL STEP.</p>
+      <h2 id="contact-title">What’s getting in<br />the way of <em>growth?</em></h2>
+      <p>
+        A Friday spreadsheet. A backlog of PDFs. A system that won’t talk to another.<br />Tell us what takes too much
+        time, and we’ll find the simplest useful next step.
+      </p>
+      {% if site.contact_email != '' %}<a
+        class="button contact-button"
+        href="mailto:{{ site.contact_email | escape }}?subject=Rooting%20in%20Data%20project%20enquiry"
+        >Start a conversation</a
+      ><a class="contact-email" href="mailto:{{ site.contact_email | escape }}">{{ site.contact_email }}</a>{% else
+      %}<button class="button contact-button" type="button" id="prepare-brief">Put your project into words</button
+      ><span class="contact-email">A simple brief is a good place to start.</span>{% endif %}
+      <div class="contact-meta">
+        <span>Based in Ireland</span><span>Working remotely</span><span>Direct collaboration</span>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,24 @@
+- icon: workflow
+  label: AUTOMATION
+  title: Get your time back.
+  description: Stop spending valuable hours on copying, chasing and repetitive admin. We build reliable workflows that run consistently, with the right checks and clear handoffs.
+  items:
+    - Repetitive tasks and reporting
+    - Document and email workflows
+    - Approvals, reminders and handoffs
+- icon: data
+  label: DATA & INSIGHT
+  title: Find the useful in your data.
+  description: Bring scattered information into focus. We turn documents, spreadsheets and databases into clean data, useful reports and answers your team can act on.
+  items:
+    - PDF and catalogue extraction
+    - Data cleaning and matching
+    - Dashboards and business analysis
+- icon: code
+  label: SOFTWARE & INTEGRATIONS
+  title: Make your systems connect.
+  description: When your tools don’t quite fit, we build the missing piece. Get practical software and integrations designed around the way your business actually works.
+  items:
+    - APIs and system integrations
+    - Internal tools and web applications
+    - Data pipelines and scheduled jobs
